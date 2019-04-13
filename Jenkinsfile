@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'node:7-alpine' }
+        docker { image 'php:7.3.4-fpm' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'php --version'
             }
         }
     }
