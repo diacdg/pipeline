@@ -5,6 +5,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'ls -la ../'
+                sh 'ls -la'
                 sh 'php test.php'
             }
         }
