@@ -1,15 +1,15 @@
 pipeline {
     agent {
         docker { 
-            image 'php:7.3.4-fpm' 
-            customWorkspace '/var/www/html'
+            image 'php:7.3.4-fpm'
         }
     }
     stages {
         stage('Test') {
             steps {
                 sh 'pwd'
-                sh 'ls -la ../'
+                sh 'ls -la /'
+                sh 'ls -la /var/www'
                 sh 'ls -la'
                 sh 'php test.php'
             }
