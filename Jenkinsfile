@@ -12,6 +12,7 @@ pipeline {
                 sh 'ls -la /var/www'
                 sh 'ls -la'
                 sh 'php test.php'
+                sh 'php -i'
             }
         }
     }
