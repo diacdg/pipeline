@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'mkdir test'
+                sh 'mkdir test 2>/dev/null'
                 sh 'ls -la /'
                 sh 'ls -la /var/www'
                 sh 'ls -la'
